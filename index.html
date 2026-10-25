@@ -20,7 +20,7 @@
     <header class="site-header">
         <nav class="navbar container" aria-label="Nawigacja główna">
             <a class="logo" href="./index.html" aria-label="DetailPoint — strona główna">
-                DetailPoint
+                Detail<span>Point</span>
             </a>
 
             <button
@@ -76,7 +76,7 @@
 
         <section class="benefits" id="benefits" aria-labelledby="benefits-title">
             <div class="container">
-                <h2 id="benefits-title">Dlaczego DetailPoint?</h2>
+                <h2 id="benefits-title">Dlaczego Detail<span>Point</span>?</h2>
 
                 <ul class="benefits-list">
                     <li>
@@ -235,22 +235,36 @@
 
     <footer class="site-footer">
         <div class="container">
-            <a class="logo" href="./index.html">DetailPoint</a>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a class="logo" href="./index.html" aria-label="DetailPoint — strona główna">
+                        Detail<span>Point</span>
+                    </a>
 
-            <nav aria-label="Nawigacja w stopce">
-                <ul class="footer-nav">
-                    <li><a href="./index.html">Start</a></li>
-                    <li><a href="./services.html">Usługi</a></li>
-                    <li><a href="./gallery.html">Galeria</a></li>
-                    <li><a href="./contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
+                    <p>
+                        Profesjonalny detailing samochodowy w Gdańsku.
+                        Dbamy o wygląd i detale Twojego auta.
+                    </p>
+                </div>
 
-            <p class="footer-note">
-                &copy; 2026 DetailPoint. Projekt demonstracyjny.
-            </p>
+                <nav class="footer-navigation" aria-label="Nawigacja w stopce">
+                    <h2>Nawigacja</h2>
+
+                    <ul class="footer-nav">
+                        <li><a href="./index.html">Start</a></li>
+                        <li><a href="./services.html">Usługi</a></li>
+                        <li><a href="./gallery.html">Galeria</a></li>
+                        <li><a href="./contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DetailPoint. Projekt demonstracyjny.</p>
+            </div>
         </div>
     </footer>
+
 
     <script src="./js/script.js"></script>
 </body>
