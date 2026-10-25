@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profesjonalny detailing samochodowy w Gdańsku. Poznaj usługi DetailPoint i zadbaj o swój samochód.">
 
-    <title>DetailPoint | Detailing samochodowy Gdańsk</title>
+    <meta
+        name="description"
+        content="DetailPoint — detailing samochodowy w Gdańsku. Poznaj nasze usługi i zadbaj o wygląd swojego samochodu."
+    >
+
+    <meta name="theme-color" content="#111315">
+
+    <title>DetailPoint | Detailing samochodowy w Gdańsku</title>
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar container">
-            <a href="./index.html">
-                <span>DetailPoint</span>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Nawigacja główna">
+            <a class="logo" href="./index.html" aria-label="DetailPoint — strona główna">
+                DetailPoint
             </a>
 
             <button
+                class="menu-toggle"
                 type="button"
                 id="menu-toggle"
                 aria-label="Otwórz menu"
@@ -30,7 +37,7 @@
             </button>
 
             <ul class="nav-list" id="nav-menu">
-                <li><a href="./index.html">Start</a></li>
+                <li><a href="./index.html" aria-current="page">Start</a></li>
                 <li><a href="./services.html">Usługi</a></li>
                 <li><a href="./gallery.html">Galeria</a></li>
                 <li><a href="./contact.html">Kontakt</a></li>
@@ -39,29 +46,212 @@
     </header>
 
     <main>
-        <section class="hero" id="hero">
-            <h1>Profesjonalny detailing samochodowy w Gdańsku</h1>
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero-content container">
+                <p class="hero-label">DETAILING SAMOCHODOWY · GDAŃSK</p>
 
-            <p>
-                Zadbaj o wygląd swojego samochodu dzięki profesjonalnej 
-                pielęgnacji. Poznaj nasze usługi detailingu i wybierz 
-                rozwiązanie dopasowane do potrzeb Twojego auta.
-            </p>
+                <h1 id="hero-title">
+                    Twój samochód.<br>
+                    Nasza pasja do detali.
+                </h1>
 
-            <a href="./services.html"  class="btn btn-primary">
-                Poznaj nasze usługi
-            </a>
+                <p class="hero-description">
+                    Profesjonalna pielęgnacja, która podkreśla wygląd
+                    i charakter Twojego samochodu.
+                </p>
 
-            <a href="./contact.html" class="btn btn-secondary">
-                Zapytaj o usługę
-            </a>
-            
+                <a href="./services.html" class="btn btn-primary">
+                    Poznaj nasze usługi
+                </a>
+            </div>
+
+            <div class="hero-image" aria-hidden="true">
+                <img
+                    src="./images/hero/hero-car.png"
+                    alt=""
+                    fetchpriority="high"
+                >
+            </div>
+        </section>
+
+        <section class="benefits" id="benefits" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title">Dlaczego DetailPoint?</h2>
+
+                <ul class="benefits-list">
+                    <li>
+                        <h3>Indywidualne podejście</h3>
+                        <p>Dobieramy zakres usług do stanu i potrzeb samochodu.</p>
+                    </li>
+
+                    <li>
+                        <h3>Dbałość o detale</h3>
+                        <p>Pracujemy starannie, zwracając uwagę na każdy element.</p>
+                    </li>
+
+                    <li>
+                        <h3>Odpowiednie produkty</h3>
+                        <p>Dobieramy środki do rodzaju powierzchni i zakresu prac.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section
+            class="services-preview"
+            id="services-preview"
+            aria-labelledby="services-title"
+        >
+            <div class="container">
+                <p class="section-label">NASZA OFERTA</p>
+                <h2 id="services-title">Usługi dopasowane do Twojego auta</h2>
+
+                <p class="services-intro">
+                    Od dokładnego czyszczenia po pielęgnację lakieru —
+                    wybierz zakres odpowiadający potrzebom samochodu.
+                </p>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Detailing zewnętrzny</h3>
+                        <p>
+                            Dokładne mycie i pielęgnacja nadwozia, felg
+                            oraz elementów zewnętrznych.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Czyszczenie wnętrza</h3>
+                        <p>
+                            Czyszczenie i pielęgnacja kokpitu, tapicerki
+                            oraz pozostałych powierzchni.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Korekta lakieru</h3>
+                        <p>
+                            Prace poprawiające wygląd lakieru,
+                            dopasowane do jego stanu.
+                        </p>
+                    </article>
+                </div>
+
+                <a href="./services.html" class="btn btn-primary">
+                    Zobacz pełną ofertę
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="gallery-preview"
+            id="gallery-preview"
+            aria-labelledby="gallery-title"
+        >
+            <div class="container">
+                <div class="gallery-heading">
+                    <div>
+                        <p class="section-label">GALERIA</p>
+                        <h2 id="gallery-title">Liczy się każdy detal.</h2>
+                    </div>
+
+                    <a href="./gallery.html" class="gallery-link">
+                        Zobacz galerię <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+                <div class="gallery-preview-grid">
+                    <figure class="gallery-item">
+                        <img
+                            src="./images/gallery/exterior.jpg"
+                            alt="Pielęgnacja zewnętrznych elementów samochodu"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="./images/gallery/interior.jpg"
+                            alt="Czyste i zadbane wnętrze samochodu"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="./images/gallery/paint-correction.jpg"
+                            alt="Pielęgnacja i korekta lakieru samochodowego"
+                            loading="lazy"
+                        >
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="process" id="process" aria-labelledby="process-title">
+            <div class="container">
+                <p class="section-label">JAK PRACUJEMY</p>
+                <h2 id="process-title">Trzy kroki do zadbanego auta</h2>
+
+                <ol class="process-steps">
+                    <li class="process-step">
+                        <span class="step-number" aria-hidden="true">01</span>
+                        <h3>Wybierz usługę</h3>
+                        <p>Opowiedz nam o samochodzie i swoich oczekiwaniach.</p>
+                    </li>
+
+                    <li class="process-step">
+                        <span class="step-number" aria-hidden="true">02</span>
+                        <h3>Ustal szczegóły</h3>
+                        <p>Dobierzemy zakres prac i ustalimy dogodny termin.</p>
+                    </li>
+
+                    <li class="process-step">
+                        <span class="step-number" aria-hidden="true">03</span>
+                        <h3>Odbierz samochód</h3>
+                        <p>Odbierz auto po zakończeniu uzgodnionych prac.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cta" id="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <p class="section-label">ZADBAJ O SWOJE AUTO</p>
+
+                <h2 id="cta-title">Twój samochód zasługuje na uwagę.</h2>
+
+                <p>
+                    Skontaktuj się z nami, aby omówić potrzeby samochodu
+                    i dobrać odpowiednią usługę.
+                </p>
+
+                <a href="./contact.html" class="btn btn-primary">
+                    Zapytaj o usługę
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        &copy; 2026 DetailPoint. Projekt demonstracyjny.
+    <footer class="site-footer">
+        <div class="container">
+            <a class="logo" href="./index.html">DetailPoint</a>
+
+            <nav aria-label="Nawigacja w stopce">
+                <ul class="footer-nav">
+                    <li><a href="./index.html">Start</a></li>
+                    <li><a href="./services.html">Usługi</a></li>
+                    <li><a href="./gallery.html">Galeria</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <p class="footer-note">
+                &copy; 2026 DetailPoint. Projekt demonstracyjny.
+            </p>
+        </div>
     </footer>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
