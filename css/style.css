@@ -1,0 +1,209 @@
+:root {
+    /* Colors */
+    --color-bg: #111315;
+    --color-surface: #1D2125;
+    --color-text: #F5F7F8;
+    --color-text-muted: #A7ADB4;
+    --color-primary: #3977FF;
+
+    /* Typography */
+    --font-main: Arial, sans-serif;
+    --line-height-base: 1.6;
+
+    /* Layout  */
+    --container-width: 1200px;
+    --section-spacing: 80px;
+    --spacing-sm: 12px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+
+    /* Components */
+    --border-radius: 8px;
+
+    /* Transition */
+    --transition-fast: 0.2s ease;
+    --transition-fast: 0.2s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: var(--line-height-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* --- Header --- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-md) 24px;
+}
+
+.navbar > a {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Hero section --- */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--spacing-md);
+    max-width: var(--container-width);
+    min-height: 70vh;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.hero h1 {
+    max-width: 800px;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.1;
+}
+
+.hero p {
+    max-width: 600px;
+    color: var(--color-text-muted);
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+.btn-secondary {
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* --- Mobile menu button --- */
+
+#menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--color-text);
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+#menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Responsive navigation --- */
+
+/* --- Responsive navigation --- */
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    #menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        width: 100%;
+        padding: var(--spacing-lg) 0;
+        margin-top: var(--spacing-md);
+        border-top: 1px solid var(--color-surface);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
+
+
