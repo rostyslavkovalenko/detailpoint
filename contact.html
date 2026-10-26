@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Skontaktuj się z DetailPoint w Gdańsku. Zapytaj o detailing zewnętrzny, czyszczenie wnętrza i pielęgnację lakieru."
+    >
+
+    <meta name="theme-color" content="#111315">
+
+    <title>Kontakt | DetailPoint — Detailing samochodowy w Gdańsku</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Nawigacja główna">
+            <a class="logo" href="./index.html" aria-label="DetailPoint — strona główna">
+                Detail<span>Point</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                id="menu-toggle"
+                aria-label="Otwórz menu"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-list" id="nav-menu">
+                <li><a href="./index.html">Start</a></li>
+                <li><a href="./services.html">Usługi</a></li>
+                <li><a href="./gallery.html">Galeria</a></li>
+                <li><a href="./contact.html" aria-current="page">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero" aria-labelledby="contact-title">
+            <div class="container">
+                <p class="section-label">DETAILPOINT · GDAŃSK</p>
+
+                <h1 id="contact-title">Porozmawiajmy<br>o Twoim samochodzie.</h1>
+
+                <p>
+                    Masz pytania dotyczące detailingu? Napisz do nas,
+                    a wspólnie dobierzemy odpowiednią usługę.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-section" aria-label="Dane kontaktowe i formularz">
+            <div class="container">
+                <div class="contact-layout">
+
+                    <div class="contact-info">
+                        <p class="section-label">KONTAKT</p>
+
+                        <h2>Jesteśmy tutaj,<br>aby pomóc.</h2>
+
+                        <p class="contact-description">
+                            Opowiedz nam o swoim samochodzie i usługach,
+                            które Cię interesują.
+                        </p>
+
+                        <div class="contact-detail">
+                            <span>LOKALIZACJA</span>
+                            <p>Gdańsk, Polska</p>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span>GODZINY OTWARCIA</span>
+                            <p>Poniedziałek – Piątek</p>
+                            <p>09:00 – 18:00</p>
+                        </div>
+
+                        <p class="contact-note">
+                            Projekt demonstracyjny — dane kontaktowe
+                            wymagają uzupełnienia przed publikacją.
+                        </p>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Zapytaj o usługę</h2>
+
+                        <p class="form-description">
+                            Wypełnij formularz, aby przygotować zapytanie.
+                        </p>
+
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-field">
+                                <label for="contact-name">Imię</label>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    autocomplete="name"
+                                    placeholder="Twoje imię"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-email">Adres e-mail</label>
+                                <input
+                                    type="email"
+                                    id="contact-email"
+                                    name="email"
+                                    autocomplete="email"
+                                    placeholder="twoj@email.pl"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-service">Interesująca usługa</label>
+                                <select
+                                    id="contact-service"
+                                    name="service"
+                                    required
+                                >
+                                    <option value="" disabled selected>
+                                        Wybierz usługę
+                                    </option>
+                                    <option value="detailing-zewnetrzny">
+                                        Detailing zewnętrzny
+                                    </option>
+                                    <option value="czyszczenie-wnetrza">
+                                        Czyszczenie wnętrza
+                                    </option>
+                                    <option value="korekta-lakieru">
+                                        Korekta lakieru
+                                    </option>
+                                    <option value="powloka-ceramiczna">
+                                        Powłoka ceramiczna
+                                    </option>
+                                    <option value="inna-usluga">
+                                        Inna usługa
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-message">Wiadomość</label>
+                                <textarea
+                                    id="contact-message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Opowiedz nam o swoim samochodzie..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Przygotuj zapytanie
+                            </button>
+
+                            <p class="form-note">
+                                Formularz demonstracyjny — wysyłanie wiadomości
+                                nie jest jeszcze skonfigurowane.
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="contact-cta-title">
+            <div class="container">
+                <p class="section-label">DETAILPOINT</p>
+
+                <h2 id="contact-cta-title">
+                    Zadbajmy wspólnie o Twój samochód.
+                </h2>
+
+                <a href="./services.html" class="btn btn-primary">
+                    Poznaj nasze usługi
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a
+                        class="logo"
+                        href="./index.html"
+                        aria-label="DetailPoint — strona główna"
+                    >
+                        Detail<span>Point</span>
+                    </a>
+
+                    <p>
+                        Profesjonalny detailing samochodowy w Gdańsku.
+                        Dbamy o wygląd i detale Twojego auta.
+                    </p>
+                </div>
+
+                <nav class="footer-navigation" aria-label="Nawigacja w stopce">
+                    <h2>Nawigacja</h2>
+
+                    <ul class="footer-nav">
+                        <li><a href="./index.html">Start</a></li>
+                        <li><a href="./services.html">Usługi</a></li>
+                        <li><a href="./gallery.html">Galeria</a></li>
+                        <li><a href="./contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DetailPoint. Projekt demonstracyjny.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
