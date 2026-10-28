@@ -54,10 +54,19 @@ body {
 /* --- Header --- */
 
 .site-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     border-bottom: 1px solid #25292D;
     background-color: var(--color-bg);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.site-header.header-hidden {
+    transform: translateY(-100%);
 }
 
 .navbar {
