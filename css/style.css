@@ -16,6 +16,7 @@
     --spacing-sm: 12px;
     --spacing-md: 24px;
     --spacing-lg: 40px;
+    --header-height: 80px;
 
     /* Components */
     --border-radius: 8px;
@@ -450,7 +451,8 @@ body {
 /* --- Services page --- */
 
 .services-hero {
-    padding-block: var(--section-spacing);
+    padding-top: calc(var(--header-height) + var(--section-spacing));
+    padding-bottom: var(--section-spacing);
 }
 
 
@@ -565,7 +567,8 @@ body {
 
 @media (max-width: 700px) {
     .services-hero {
-        padding-block: 56px 40px;
+        padding-top: calc(var(--header-height) + 24px);
+        padding-bottom: 40px;
     }
 
     .services-list {
@@ -1114,7 +1117,8 @@ body {
 /* Gallery page */
 
 .gallery-hero {
-    padding-block: 80px 64px;
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 64px;
 }
 
 
@@ -1247,7 +1251,8 @@ body {
 
 @media (max-width: 800px) {
     .gallery-hero {
-        padding-block: 64px 48px;
+        padding-top: calc(var(--header-height) + 24px);
+        padding-bottom: 48px;
     }
 
     .gallery-showcase {
@@ -1272,7 +1277,8 @@ body {
 
 @media (max-width: 560px) {
     .gallery-hero {
-        padding-block: 56px 40px;
+        padding-top: calc(var(--header-height) + 16px);
+        padding-bottom: 40px;
     }
     .gallery-hero h1 {
         font-size: clamp(38px, 10vw, 52px);
@@ -1326,7 +1332,8 @@ body {
 /* --- Contact page --- */
 
 .contact-section {
-    padding-block: clamp(40px, 5vw, 72px) 80px;
+    padding-top: calc(var(--header-height) + 24px);
+    padding-bottom: 80px;
 }
 
 /* Page heading */
@@ -1558,7 +1565,8 @@ body {
 
 @media (max-width: 760px) {
     .contact-section {
-        padding-block: 40px 56px;
+        padding-top: calc(var(--header-height) + 24px);
+        padding-bottom: 56px;
     }
 
     .contact-page-heading {
@@ -1581,7 +1589,8 @@ body {
 
 @media (max-width: 480px) {
     .contact-section {
-        padding-block: 32px 40px;
+        padding-top: calc(var(--header-height) + 16px);
+        padding-bottom: 40px;
     }
 
     .contact-page-heading h1 {
@@ -1627,7 +1636,7 @@ body:has(.contact-section) .site-footer {
 /* Contact form status messages */
 
 .form-success {
-    color: #4ade80;
+    color: #4ade80;    
 }
 
 .form-error {
