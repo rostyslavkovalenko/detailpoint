@@ -38,6 +38,7 @@ The website presents car detailing services, showcases example projects, and pro
 
 ## Project Structure
 
+```text
 detailpoint/
 ├── css/
 │   └── style.css
@@ -53,16 +54,21 @@ detailpoint/
 ├── gallery.html
 ├── contact.html
 └── README.md
+```
 
 ## Run Locally
 
 1. Clone the repository:
 
+   ```bash
    git clone https://github.com/rostyslavkovalenko/detailpoint.git
+   ```
 
 2. Open the project folder:
 
+   ```bash
    cd detailpoint
+   ```
 
 3. Open `index.html` in your browser, or use the Live Server extension in Visual Studio Code.
 
@@ -70,11 +76,11 @@ No build tools or package installation are required.
 
 ## Deployment
 
-The website is hosted on Vercel and connected to the GitHub repository. Updates pushed to the main branch trigger automatic deployments.
+The website is hosted on Vercel and connected to the GitHub repository. Updates pushed to the `main` branch trigger automatic deployments.
 
 ## Project Status
 
-The main website pages and responsive navigation are implemented. The contact form still requires a submission service or backend integration.
+The main website pages, responsive layout, and navigation are implemented. The contact form still requires a submission service or backend integration.
 
 ## Author
 
