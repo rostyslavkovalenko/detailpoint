@@ -1623,3 +1623,13 @@ body:has(.contact-section) .site-footer {
     margin-top: 0;
     border-top: 1px solid #30363D;
 }
+
+/* Contact form status messages */
+
+.form-success {
+    color: #4ade80;
+}
+
+.form-error {
+    color: #f87171;
+}

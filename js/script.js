@@ -42,3 +42,50 @@ window.addEventListener("scroll", () => {
 
     lastScrollY = currentScrollY;
 });
+
+
+
+// Contact form — EmailJS
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    emailjs.init({
+        publicKey: "oSDSw1Gp3fS85Hsmy",
+    });
+
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+        const formNote = contactForm.querySelector(".form-note");
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Wysyłanie...";
+
+        try {
+            await emailjs.sendForm(
+                "service_hoakqrr",
+                "template_hq55qw4",
+                contactForm
+            );
+
+            formNote.textContent =
+                "Dziękujemy! Wiadomość została wysłana.";
+            formNote.classList.add("form-success");
+
+            contactForm.reset();
+        } catch (error) {
+            console.error("EmailJS error:", error);
+
+            formNote.textContent =
+                "Nie udało się wysłać wiadomości. Spróbuj ponownie.";
+            formNote.classList.add("form-error");
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = "Przygotuj zapytanie";
+        }
+    });
+}
